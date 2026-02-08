@@ -47,9 +47,18 @@ a {
 .mark {
   width: 60px;
   height: 60px;
-  border-radius: 20px;
-  background: conic-gradient(from 190deg, #c23b22, #f0c4a8, #3f2a1b, #c23b22);
-  box-shadow: 0 12px 24px rgba(194, 59, 34, 0.35);
+  border-radius: 18px;
+  background: #fff;
+  border: 1px solid var(--line);
+  display: grid;
+  place-items: center;
+  box-shadow: 0 12px 24px rgba(194, 59, 34, 0.2);
+}
+
+.mark svg {
+  width: 44px;
+  height: 44px;
+  fill: var(--accent);
 }
 
 .eyebrow {
