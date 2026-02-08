@@ -1,4 +1,4 @@
-:root {
+﻿:root {
   --ink: #12100f;
   --muted: #6f6660;
   --bg: #f4efe9;
@@ -8,6 +8,7 @@
   --accent-soft: #ffe2d6;
   --line: #e4d6c8;
   --shadow: rgba(18, 16, 15, 0.12);
+  --whatsapp: #1fa463;
 }
 
 * {
@@ -40,6 +41,7 @@ a {
   gap: 18px;
   align-items: center;
   max-width: 700px;
+  text-align: center;
 }
 
 .mark {
@@ -52,16 +54,18 @@ a {
 
 .eyebrow {
   text-transform: uppercase;
-  letter-spacing: 0.2em;
-  font-size: 11px;
-  color: var(--muted);
-  margin: 0 0 8px;
+  letter-spacing: 0.08em;
+  font-size: clamp(20px, 2.6vw, 32px);
+  color: var(--ink);
+  margin: 0 0 6px;
+  font-weight: 700;
   font-family: "Manrope", "Segoe UI", sans-serif;
 }
 
 h1 {
   margin: 0;
-  font-size: clamp(28px, 3.2vw, 40px);
+  font-size: clamp(18px, 2.2vw, 26px);
+  font-weight: 500;
 }
 
 .subhead {
@@ -224,6 +228,22 @@ main {
   padding: 24px;
 }
 
+.gallery-card {
+  display: grid;
+  gap: 14px;
+}
+
+.gallery-media {
+  height: 160px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #ffe7da, #f8d5c3, #f0c4a8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: #5e392b;
+}
+
 .btn {
   display: inline-flex;
   align-items: center;
@@ -272,6 +292,24 @@ main {
   font-family: "Manrope", "Segoe UI", sans-serif;
 }
 
+.whatsapp {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background: var(--whatsapp);
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 999px;
+  font-family: "Manrope", "Segoe UI", sans-serif;
+  font-weight: 700;
+  box-shadow: 0 14px 26px rgba(31, 146, 88, 0.35);
+  z-index: 10;
+}
+
+.whatsapp:hover {
+  background: #178554;
+}
+
 @media (max-width: 720px) {
   .site-header {
     padding-top: 32px;
@@ -284,5 +322,10 @@ main {
 
   .btn {
     width: 100%;
+  }
+
+  .whatsapp {
+    right: 14px;
+    bottom: 14px;
   }
 }
